@@ -1,0 +1,11 @@
+{
+  "editor.defaultFormatter": null,
+  "css.format.newlineBetweenSelectors": true,
+  "scss.format.newlineBetweenSelectors": false,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true
+  }
+}
