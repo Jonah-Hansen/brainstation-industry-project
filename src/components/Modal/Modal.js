@@ -2,13 +2,13 @@ import { Element, Link } from 'react-scroll';
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption';
 import './Modal.scss';
 
-function Modal() {
+function Modal({ modalRef }) {
 
   return (
-    <main className="modal">
+    <main ref={modalRef} className="modal--hidden">
       <header className='modal__header'>
         <section className='modal__heading-container'>
-          <button className='modal__back'>
+          <button className='modal__back' onClick={() => modalRef.current.className = 'modal--hidden'}>
             <span className='modal__back-text'>back</span>
           </button>
           <h1 className='modal__title'>Google Accessibility</h1>
