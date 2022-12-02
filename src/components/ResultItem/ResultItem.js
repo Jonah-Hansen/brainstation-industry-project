@@ -1,7 +1,8 @@
+import icon from '../../assets/logos/glueglue.png'
 import './ResultItem.scss'
 
 function ResultItem({ data }) {
-  const { pageTitle, url, title, description, icon } = data
+  const { pageTitle, url, title, description } = data
   return (
     <li className='result-item'>
       <h2 className='result-item__title'>{title}</h2>
