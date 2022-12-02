@@ -39,6 +39,11 @@ function App() {
       })
     }
 
+    if (enabledFeatures.Dark) {
+      document.querySelector('html').style.filter = 'invert(1) hue-rotate(180deg)'
+      document.querySelectorAll('img').forEach(el => el.style.filter = 'invert(1) hue-rotate(180deg)')
+    } else document.querySelector('html').removeAttribute('style')
+
   },)
 
   return (

@@ -1,7 +1,13 @@
+@use './styles/colors' as *;
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background-color: $gray-nyn;
 }
 
 button, input, select, textarea, ::placeholder {
