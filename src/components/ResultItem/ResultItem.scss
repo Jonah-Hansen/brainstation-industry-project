@@ -3,13 +3,13 @@
 @use '../../styles/fonts' as *;
 
 .result-item {
-  padding: 1rem;
+  padding: .75rem 1.25rem;
   display: flex;
   flex-direction: column;
   background-color: white;
 
   &__title {
-    padding: .75rem 0;
+    padding: .5rem 0;
     font-size: 1.125rem;
     color: $light-blue;
   }
@@ -17,12 +17,14 @@
   &__header {
     display: flex;
     align-items: center;
+    gap: .5rem;
     order: -1;
   }
 
   &__icon {
-    width: 1.6rem;
     height: 1.5625rem;
+    background-color: $mercury;
+    border-radius: 50%;
   }
 
   &__page-title {

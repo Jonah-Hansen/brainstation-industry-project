@@ -1,4 +1,6 @@
+@use '../../styles/breakpoints' as *;
 @use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
 
 .video-result {
   display: flex;
@@ -17,7 +19,7 @@
   }
 
   &__title {
-    color: $blue;
+    color: $light-blue;
     font-weight: 400;
     font-size: .875rem;
     margin: 0 1rem;

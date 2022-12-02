@@ -1,15 +1,27 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .5rem;
-  background-color: #F1F3F4;
-  padding: 1rem 0;
+  background-color: $mercury;
+  padding: 1rem 0 4rem;
 
   &__see-more {
     width: 90%;
     margin-bottom: 1rem;
     background-color: white;
+    font-size: .875rem;
+    height: 2.5rem;
+    border: .0625rem solid $iron;
+    border-radius: 1.5625rem;
+  }
+
+  &__country {
+    color: $steel;
   }
 
   &__lang {
@@ -17,21 +29,27 @@
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-top: 1px solid #b1b3b4;
-    border-bottom: 1px solid #b1b3b4;
+    border-top: 1px solid $silver;
+    border-bottom: 1px solid $silver;
     width: 100%;
 
+    &-heading {
+      color: $steel;
+    }
+
     &-alt {
-      color: blue;
+      color: $blue;
     }
 
     &-button {
-      color: blue;
-      border: 2px solid blue;
+      color: $blue;
+      border: 2px solid $blue;
     }
   }
 
   &__fine-print {
+    padding-top: 1rem;
+    color: $steel;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
