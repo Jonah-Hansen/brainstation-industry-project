@@ -1,5 +1,9 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
+
 .related-searches {
-  background-color: white;
+  background-color: $white;
   display: flex;
   flex-direction: column;
 
@@ -14,7 +18,7 @@
   }
 
   &__item {
-    border-top: 1px solid #b1b3b4;
+    border-top: 1px solid $gray-six;
     padding: 1rem;
   }
 }

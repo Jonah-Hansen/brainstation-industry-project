@@ -7,21 +7,21 @@
   flex-direction: column;
   align-items: center;
   gap: .5rem;
-  background-color: $mercury;
+  background-color: $off-white;
   padding: 1rem 0 4rem;
 
   &__see-more {
     width: 90%;
     margin-bottom: 1rem;
-    background-color: white;
+    background-color: $white;
     font-size: .875rem;
     height: 2.5rem;
-    border: .0625rem solid $iron;
+    border: .0625rem solid $gray-fiv;
     border-radius: 1.5625rem;
   }
 
   &__country {
-    color: $steel;
+    color: $gray-tre;
   }
 
   &__lang {
@@ -29,12 +29,12 @@
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-top: 1px solid $silver;
-    border-bottom: 1px solid $silver;
+    border-top: 1px solid $gray-nyn;
+    border-bottom: 1px solid $gray-nyn;
     width: 100%;
 
     &-heading {
-      color: $steel;
+      color: $gray-tre;
     }
 
     &-alt {
@@ -49,7 +49,7 @@
 
   &__fine-print {
     padding-top: 1rem;
-    color: $steel;
+    color: $gray-tre;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
