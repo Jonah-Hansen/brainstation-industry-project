@@ -1,4 +1,3 @@
-
 import './AccessibilityButton.scss';
 
 function AccessibilityButton({ setIsModal, setScroll }) {
