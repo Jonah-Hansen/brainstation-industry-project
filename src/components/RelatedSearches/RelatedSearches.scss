@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  &__heading {
+    padding: 1rem;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

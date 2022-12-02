@@ -5,12 +5,12 @@
   overflow-x: hidden;
 }
 
-input {
-  border: none;
+button, input, select, textarea, ::placeholder {
+  font: inherit;
 }
 
-::placeholder {
-  font-size: .75rem;
+input {
+  border: none;
 }
 
 a {
@@ -22,5 +22,5 @@ ul {
 }
 
 body {
-  font-family: 'google', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  border-bottom: 2px solid #e7e7e7;
+  border-bottom: 2px solid $silver;
 
   &__assets {
     margin: 0 1rem;
@@ -55,17 +55,24 @@
   }
 
   &__searchfield {
+    font-size: .75rem;
     height: 2rem;
-    padding-left: 2rem;
     width: 100%;
+    padding-left: 2rem;
   }
 
   &__modes {
     margin-left: 1rem;
     display: flex;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__mode {
+    flex-shrink: 0;
     background-color: $white;
     font-size: .75rem;
     display: flex;
@@ -74,7 +81,7 @@
     font-weight: 400;
     padding: .5rem;
     padding-left: 1rem;
-    border: 1.5px solid #e7e7e7;
+    border: 1.5px solid $silver;
     border-radius: 3.125rem;
   }
 }

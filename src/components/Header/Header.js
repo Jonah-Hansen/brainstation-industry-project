@@ -25,6 +25,9 @@ function Header() {
         <p className='header__mode'>Books</p>
         <p className='header__mode'>News</p>
         <p className='header__mode'>Shopping</p>
+        <p className='header__mode'>Shopping</p>
+        <p className='header__mode'>Shopping</p>
+        <p className='header__mode'>Shopping</p>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import Results from './components/Results/Results';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Results />
       <Footer />
