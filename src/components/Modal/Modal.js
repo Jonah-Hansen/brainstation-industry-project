@@ -2,6 +2,19 @@ import { Element, Link } from 'react-scroll';
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption';
 import './Modal.scss';
 
+import AdhdIcon from '../../assets/icons/adhd.svg';
+import FontSizingIcon from '../../assets/icons/adjust.svg';
+import BionicIcon from '../../assets/icons/bionic.svg';
+import BlindIcon from '../../assets/icons/blind.svg';
+import CognitiveIcon from '../../assets/icons/cognitive.svg';
+import DarkContrastIcon from '../../assets/icons/dark-contrast.svg';
+import HighlightIcon from '../../assets/icons/highlight.svg';
+import LightContrastIcon from '../../assets/icons/light-contrast.svg';
+import MagnifyIcon from '../../assets/icons/magnifier.svg';
+import SeizureIcon from '../../assets/icons/seizure.svg';
+import ContentIcon from '../../assets/icons/spacing.svg';
+import ImpairedIcon from '../../assets/icons/vision.svg';
+
 function Modal({ modalRef }) {
 
   return (
@@ -18,43 +31,49 @@ function Modal({ modalRef }) {
         <nav className='modal__nav'>
           <ul className='modal__nav-list'>
             <li className='modal__nav-list-item'>
-              <Link activeClass="active" to="general" spy={true} smooth={true} offset={-50} duration={250} >General</Link>
+              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} smooth={true} offset={-50} duration={250} >General</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link activeClass="active" to="visual" spy={true} smooth={true} offset={-50} duration={250} >Visual</Link>
+              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} smooth={true} offset={-50} duration={250} >Visual</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >Content Adjustments</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >Content Adjustments</Link>
+            </li>
+            <li className='modal__nav-list-item'>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >More</Link>
             </li>
           </ul>
         </nav>
       </header>
-      <input type="search" placeholder='Search Setting' className='modal__search' />
+      <div className='modal__searchbar'>
+        <input type="search" placeholder='Search Settings' className='modal__searchfield' />
+      </div>
       <Element name='general' >
         <section className='modal__section'>
           <h2 className='modal__section-heading'>General</h2>
-          <AccessibilityOption title={'Blind Users Friendly'} description={'Activates Screen reader'} />
-          <AccessibilityOption title={'ADHD Friendly'} description={'More Focus, fewer Distractions'} />
-          <AccessibilityOption title={'Vision Impaired Friendly'} description={'Enhances screen visuals'} />
-          <AccessibilityOption title={'Seizure Safe'} description={'Clear flashes and reduces color'} />
-          <AccessibilityOption title={'Cognitive disability Friendly'} description={'Assists with reading and focusing'} />
+          <AccessibilityOption title={'Blind Users Friendly'} icon={BlindIcon} description={'Activates Screen Reader'} />
+          <AccessibilityOption title={'ADHD Friendly'} icon={AdhdIcon} description={'More Focus, Fewer Distractions'} />
+          <AccessibilityOption title={'Vision Impaired Friendly'} icon={ImpairedIcon} description={'Enhances screen visuals'} />
+          <AccessibilityOption title={'Seizure Safe'} icon={SeizureIcon} description={'Clear flashes and reduces color'} />
+          <AccessibilityOption title={'Cognitive Disability Friendly'} icon={CognitiveIcon} description={'Assists with reading and focusing'} />
         </section>
       </Element>
       <Element name='visual'>
         <section className='modal__section'>
-          <h2 className='modal__section-heading'>visual</h2>
-          <AccessibilityOption title={'Bionic Reading'} description={'makes words easier to distinguish'} />
+          <h2 className='modal__section-heading'>Visuals</h2>
+          <AccessibilityOption title={'Dark Contrast'} icon={DarkContrastIcon} />
+          <AccessibilityOption title={'Light Contrast'} icon={LightContrastIcon} />
+          <AccessibilityOption title={'Bionic Reading'} icon={BionicIcon} description={'Makes words easier to distinguish'} />
           <AccessibilityOption title={'Title Colors'} type={'colors'} />
         </section>
       </Element>
       <Element name='content' >
         <section className='modal__section'>
           <h2 className='modal__section-heading'>Content Adjustments</h2>
-          <AccessibilityOption title={'Blind Users Friendly'} description={'Activates Screen reader'} />
-          <AccessibilityOption title={'ADHD Friendly'} description={'More Focus, fewer Distractions'} />
-          <AccessibilityOption title={'Vision Impaired Friendly'} description={'Enhances screen visuals'} />
-          <AccessibilityOption title={'Seizure Safe'} description={'Clear flashes and reduces color'} />
-          <AccessibilityOption title={'Cognitive disability Friendly'} description={'Assists with reading and focusing'} />
+          <AccessibilityOption title={'Content Spacing'} icon={ContentIcon} />
+          <AccessibilityOption title={'Adjust Font Sizing'} icon={FontSizingIcon} />
+          <AccessibilityOption title={'Highlight Titles'} icon={HighlightIcon} />
+          <AccessibilityOption title={'Text Magnifier'} icon={MagnifyIcon} />
         </section>
       </Element>
     </main>

@@ -18,7 +18,9 @@ function AccessibilityOption({ type, title, description, icon }) {
         </>
         :
         <>
-          <img className='option-row__icon' src={icon} alt={`${title} icon`} />
+          <div className='option-row__icon--bubble'>
+            <img className='option-row__icon' src={icon} alt={`${title} icon`} />
+          </div>
           <hgroup className='option-row__details'>
             <h2 className='option-row__title'>{title}</h2>
             <p className='option-row__description'>{description}</p>
