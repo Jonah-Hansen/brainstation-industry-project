@@ -82,11 +82,11 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, setIsConfirm, 
       <Element name='general' >
         <section className='modal__section'>
           <h2 className='modal__section-heading'>General</h2>
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Blind Users Friendly'} icon={BlindIcon} description={'Activates Screen Reader'} />
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'ADHD Friendly'} icon={AdhdIcon} description={'More Focus, Fewer Distractions'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Text to Speech'} icon={BlindIcon} description={'Activates Screen Reader'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Closed Captioning'} icon={AdhdIcon} description={'More Focus, Fewer Distractions'} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Vision Impaired Friendly'} icon={ImpairedIcon} description={'Enhances screen visuals'} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Seizure Safe'} icon={SeizureIcon} description={'Clear flashes and reduces color'} />
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Cognitive Disability Friendly'} icon={CognitiveIcon} description={'Assists with reading and focusing'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Hover Text'} icon={CognitiveIcon} description={'Assists with reading and focusing'} />
         </section>
       </Element>
       <Element name='visual'>
@@ -104,7 +104,7 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, setIsConfirm, 
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Content Spacing'} icon={ContentIcon} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Adjust Font Sizing'} icon={FontSizingIcon} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Highlight Titles'} icon={HighlightIcon} />
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Text Magnifier'} icon={MagnifyIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'text Magnifier'} icon={MagnifyIcon} />
         </section>
       </Element>
     </main>
