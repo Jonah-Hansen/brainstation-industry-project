@@ -24,7 +24,11 @@ function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
 
   const handleSwitch = event => {
     const newFeatures = { ...features }
-    newFeatures[event.target.name.split(' ')[0]] = event.target.checked
+    if (event.target.name.split(' ')[0] === 'Title') {
+      newFeatures[event.target.name.split(' ')[0]][0] = event.target.checked
+    } else {
+      newFeatures[event.target.name.split(' ')[0]] = event.target.checked
+    }
     setFeatures(newFeatures)
   }
 
