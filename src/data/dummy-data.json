@@ -1,62 +1,72 @@
 [
   {
     "pageTitle": "google.com",
-    "url": "http://www.google.com > accessibility",
     "title": "Accessibility - Google",
+    "url": "http://www.google.com > accessibility",
+    "url_link": "http://www.google.com/accessibility/",
     "description": "Find Guides and Resources ... Information and resources to help you develop accessible products and apps. ... Guides and resources for using Google products in your ..."
   },
   {
     "pageTitle": "google.com",
     "title": "Products and Features - Google Accessibility",
-    "url": "http://www.google.com > accessibility > products-featu...",
+    "url": "http://www.google.com/accessibility/products-features/",
+    "url_link": "http://www.google.com > accessibility > products-featu...",
     "description": "Android Accessibility Suite helps make your Android device more accessible."
   },
   {
     "pageTitle": "support.google",
     "title": "Google Accessibility Help",
     "url": "http://support.google.com > accessibility",
+    "url_link": "https://support.google.com/accessibility/?hl=en#topic=9071908",
     "description": "Official Google Accessibility Help Center where you can find tips and ..."
   },
   {
     "pageTitle": "blog.google",
     "title": "Accessibility | Google Blog",
     "url": "http://blog.google.com > outreach-initiatives > accessibility",
+    "url_link": "https://blog.google/outreach-initiatives/accessibility/",
     "description": "Read the latest news about our efforts to help everyone access and enjoy the web."
   },
   {
     "pageTitle": "about.google",
     "title": "Accessibility in Our Products & Features - About Google",
     "url": "http://about.google.com > belonging > product-accessibility",
+    "url_link": "https://about.google/belonging/disability-inclusion/product-accessibility/",
     "description": "Google is dedicated to making product accessibility a priority. Learn about accessibility products and features that improve usability for everyone."
   },
   {
     "pageTitle": "edu.google",
     "title": "Accessibility - Google for Education",
     "url": "http://edu.google.com > intl > ALL_us > why-google",
+    "url_link": "https://edu.google.com/intl/ALL_us/why-google/accessibility/",
     "description": "Features such as visual aids, closed captioning, and real-time collaboration in ..."
   },
   {
     "pageTitle": "twitter.com",
     "title": "Google Accessibility (@googleaccess) / Twitter",
     "url": "http://www.twitter.com > googleaccess",
+    "url_link": "https://twitter.com/googleaccess?lang=en",
     "description": "@googleaccess. The official Twitter account for Google's Accessibility team. California, USA google.com/accessibility/ Erregistratze-data: 2010(e)ko urria."
   },
   {
     "pageTitle": "forbes.com",
     "title": "Google Announces Accessibility Updates That Help Disabled ...",
     "url": "http://www.forbes.com > stevenaquino > 2022/09/09",
+    "url_link": "https://www.forbes.com/sites/stevenaquino/2022/09/09/google-announces-accessibility-updates-that-help-disabled-people-get-more-done-and-have-fun/?sh=6b1891951957",
     "description": "Sep 9, 2022 — In addition to customizable sounds for Sound Notifications, Google also announced a relatively minor accessibility-focused update to the Google ..."
   },
   {
     "pageTitle": "web.dev",
     "title": "Accessibility - web.dev",
     "url": "http://web.dev > accessibility",
+    "url_link": "https://web.dev/accessibility/",
     "description": "Improving accessibility for web pages. ... question/answer session with Victor Tsaran, a Technical Program Manager at Google, who is totally blind."
   },
   {
     "pageTitle": "play.google",
-    "title": "Android Accessibility",
+    "title": "Android Accessibility Suite - Apps on Google Play",
     "url": "http://play.google.com > store > apps > details > id=co...",
+    "url_link": "https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=en_US&gl=US&pli=1",
     "description": "Oct 6, 2022 — Android Accessibility Suite is a collection of accessibility apps that help you use your Android device eyes-free or with a switch device."
   }
 ]
