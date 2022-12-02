@@ -43,5 +43,8 @@
     height: 2rem;
     border-radius: 50%;
 
+    &.active {
+      border: 2px solid black;
+    }
   }
 }

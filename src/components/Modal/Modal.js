@@ -15,6 +15,12 @@ function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
     setFeatures(newFeatures)
   }
 
+  const handleColor = (color) => {
+    const newFeatures = { ...features }
+    newFeatures.Title[1] = color
+    setFeatures(newFeatures)
+  }
+
   const handleCancel = () => {
     setFeatures(enabledFeatures)
     modalRef.current.className = 'modal--hidden'
@@ -65,7 +71,7 @@ function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
         <section className='modal__section'>
           <h2 className='modal__section-heading'>visual</h2>
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Bionic Reading'} description={'makes words easier to distinguish'} />
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Title Colors'} type={'colors'} />
+          <AccessibilityOption handleSwitch={handleSwitch} handleColor={handleColor} features={features} title={'Title Colors'} type={'colors'} />
         </section>
       </Element>
       <Element name='content' >
