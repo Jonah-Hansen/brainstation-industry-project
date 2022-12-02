@@ -16,7 +16,7 @@ import SeizureIcon from '../../assets/icons/seizure.svg';
 import ContentIcon from '../../assets/icons/spacing.svg';
 import ImpairedIcon from '../../assets/icons/vision.svg';
 
-function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, scroll }) {
+function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, setIsConfirm, setOldFeatures }) {
 
   const [features, setFeatures] = useState({ ...enabledFeatures })
 
@@ -42,8 +42,10 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, scroll }) {
   }
 
   const handleDone = () => {
+    setOldFeatures(enabledFeatures)
     setEnabledFeatures(features)
     setIsModal(false)
+    setIsConfirm(true)
   }
 
   return (
