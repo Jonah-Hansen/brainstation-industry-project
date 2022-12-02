@@ -15,6 +15,7 @@ import ShoppingIcon from '../../assets/icons/shop.svg';
 import FinanceIcon from '../../assets/icons/stock.svg';
 import FlightsIcon from '../../assets/icons/travel.svg';
 import VideoIcon from '../../assets/icons/video.svg';
+import personaProfile from '../../assets/images/personaProfile.svg';
 
 
 function Header() {
@@ -23,7 +24,7 @@ function Header() {
       <section className='header__assets'>
         <img className='header__menu-icon' src={MenuIcon} alt="Menu Icon" />
         <img className='header__logo' src={GoogleLogo} alt="Google Logo" />
-        <div className='header__avatar'></div>
+        <img className='header__avatar' src={personaProfile} alt='user profile'></img>
       </section>
       <section className='header__searchbar'>
         <img className='header__menu-icon header__menu-icon--search' src={SearchIcon} alt="Search Icon" />

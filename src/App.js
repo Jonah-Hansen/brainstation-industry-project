@@ -10,7 +10,7 @@ import Results from './components/Results/Results';
 function App() {
 
   const [enabledFeatures, setEnabledFeatures] = useState({
-    Closed: false, Bionic: false, Text: false, Hover: false, Seizure: false, Vision: false, Title: [false, undefined], Dark: false, Light: false, Content: false, Adjust: false, Highlight: false, text: false
+    Closed: false, Bionic: false, Text: false, Hover: false, Seizure: false, Vision: false, Title: [false, undefined], Dark: false, Light: false, Content: false, Adjust: false, Highlight: false, Magnify: false
   })
 
   const [oldFeatures, setOldFeatures] = useState({})

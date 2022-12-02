@@ -104,7 +104,7 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, setIsConfirm, 
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Content Spacing'} icon={ContentIcon} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Adjust Font Sizing'} icon={FontSizingIcon} />
           <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Highlight Titles'} icon={HighlightIcon} />
-          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'text Magnifier'} icon={MagnifyIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Magnify Text'} icon={MagnifyIcon} />
         </section>
       </Element>
     </main>

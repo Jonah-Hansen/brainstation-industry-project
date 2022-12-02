@@ -37,7 +37,7 @@ function Confirm({ setIsConfirm, oldFeatures, enabledFeatures, setEnabledFeature
         case 'Content': title = key + ' Spacing'; break;
         case 'Adjust': title = key + ' Font Sizing'; break;
         case 'Highlight': title = key + ' Titles'; break;
-        case 'text': title = key + ' Magnifier'; break;
+        case 'Magnify': title = key + ' Text'; break;
         default: title = 'unknown feature'
       }
       chosenFeatures.push(title)
