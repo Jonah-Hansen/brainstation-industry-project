@@ -1,0 +1,10 @@
+.result-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  &__header {
+    display: flex;
+    order: -1;
+  }
+}

@@ -1,8 +1,13 @@
-import React from 'react'
+import data from '../../data/dummy-data.json'
+import ResultItem from '../ResultItem/ResultItem'
+import './Results.scss'
+
 
 function Results() {
   return (
-    <div>Results</div>
+    <ul className='results'>
+      {data.map(item => <ResultItem data={item} />)}
+    </ul>
   )
 }
 
