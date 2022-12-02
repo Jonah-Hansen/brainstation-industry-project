@@ -10,7 +10,7 @@
 
   &__card {
     flex-shrink: 0;
-    border: 1px solid $silver;
+    border: 1px solid $gray-nyn;
     border-radius: 8px;
     width: min-content;
     display: flex;
@@ -26,14 +26,14 @@
   }
 
   &__channel {
-    color: $iron;
+    color: $gray-fiv;
     font-weight: 400;
     font-size: .625rem;
     margin: 0 1rem;
   }
 
   &__date {
-    color: $steel;
+    color: $gray-tre;
     font-size: .625rem;
     margin: 0 1rem 1rem;
   }

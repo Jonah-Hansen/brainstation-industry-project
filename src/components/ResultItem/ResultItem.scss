@@ -6,7 +6,7 @@
   padding: .75rem 1.25rem;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: $white;
 
   &__title {
     padding: .5rem 0;
@@ -23,7 +23,7 @@
 
   &__icon {
     height: 1.5625rem;
-    background-color: $mercury;
+    background-color: $off-white;
     border-radius: 50%;
   }
 
