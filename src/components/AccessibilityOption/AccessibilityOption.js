@@ -1,5 +1,5 @@
 import Switch from '@mui/material/Switch';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './AccessibilityOption.scss';
 
 function AccessibilityOption({ type, title, description, icon, handleSwitch, handleColor, features }) {

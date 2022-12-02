@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Element, Link } from 'react-scroll';
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption';
 import './Modal.scss';
@@ -16,11 +16,9 @@ import SeizureIcon from '../../assets/icons/seizure.svg';
 import ContentIcon from '../../assets/icons/spacing.svg';
 import ImpairedIcon from '../../assets/icons/vision.svg';
 
-function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
+function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, scroll }) {
 
-  const [features, setFeatures] = useState({
-    ADHD: false, Bionic: false, Blind: false, Cognitive: false, Seizure: false, Vision: false, Title: [false, undefined], Dark: false, Light: false, Content: false, Adjust: false, Highlight: false, Text: false
-  })
+  const [features, setFeatures] = useState({ ...enabledFeatures })
 
   const handleSwitch = event => {
     const newFeatures = { ...features }
@@ -40,16 +38,16 @@ function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
 
   const handleCancel = () => {
     setFeatures(enabledFeatures)
-    modalRef.current.className = 'modal--hidden'
+    setIsModal(false)
   }
 
   const handleDone = () => {
     setEnabledFeatures(features)
-    modalRef.current.className = 'modal--hidden'
+    setIsModal(false)
   }
 
   return (
-    <main ref={modalRef} className="modal--hidden">
+    <main className="modal">
       <header className='modal__header'>
         <section className='modal__heading-container'>
           <button className='modal__back' onClick={handleCancel}>
@@ -62,16 +60,16 @@ function Modal({ modalRef, enabledFeatures, setEnabledFeatures }) {
         <nav className='modal__nav'>
           <ul className='modal__nav-list'>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} smooth={true} offset={-50} duration={250} >General</Link>
+              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} smooth={true} offset={-90} duration={250} >General</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} smooth={true} offset={-50} duration={250} >Visual</Link>
+              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} smooth={true} offset={-90} duration={250} >Visual</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >Content Adjustments</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-90} duration={250} >Content Adjustments</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >More</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-90} duration={250} >More</Link>
             </li>
           </ul>
         </nav>
