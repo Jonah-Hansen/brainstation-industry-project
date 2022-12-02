@@ -11,8 +11,10 @@ function Modal() {
           <button className='modal__back'>
             <span className='modal__back-text'>back</span>
           </button>
-          <h1 className='modal__title'>Accessibility</h1>
+          <h1 className='modal__title'>Google Accessibility</h1>
+          <button className='modal__done'>Done</button>
         </section>
+
         <nav className='modal__nav'>
           <ul className='modal__nav-list'>
             <li className='modal__nav-list-item'>

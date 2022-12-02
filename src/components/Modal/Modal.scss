@@ -16,18 +16,25 @@
   &__header {
     position: sticky;
     top: 0;
-    background-color: white;
+    z-index: 1;
+    background-color: $mercury;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   &__heading-container {
     display: flex;
+    justify-content: space-between;
   }
 
   &__back {
     width: 2rem;
     height: 2rem;
+    background: url('../../assets/icons/back.svg') no-repeat;
+    background-size: cover;
+    border: none;
 
     &-text {
       display: none;
@@ -35,10 +42,30 @@
   }
 
   &__title {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
+    font-weight: 400;
+  }
+
+  &__done {
+    color: $blue;
+    border: none;
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+
+      &-item {
+        color: $steel;
+
+        & > a.active {
+          border-bottom: 2px solid $blue;
+          padding-bottom: .25rem;
+        }
+      }
+    }
   }
 
   &__section {
