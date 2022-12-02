@@ -9,6 +9,7 @@
   top: 0;
   width: 100%;
   background-color: $white;
+  padding-bottom: 90rem;
 
   &--hidden {
     display: none;
@@ -27,6 +28,7 @@
 
   &__heading-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -43,11 +45,12 @@
   }
 
   &__title {
+    font-size: 1.25rem;
     font-weight: 400;
   }
 
   &__done {
-    color: $blue;
+    color: $light-blue;
     border: none;
   }
 
@@ -55,18 +58,44 @@
 
     &-list {
       display: flex;
-      gap: 2rem;
-      justify-content: center;
+      overflow-x: scroll;
+      margin-left: 1rem;
 
       &-item {
+        flex-shrink: 0;
         color: $gray-tre;
+        padding-right: 2rem;
 
         & > a.active {
-          border-bottom: 2px solid $blue;
+          border-bottom: 2px solid $light-blue;
           padding-bottom: .25rem;
         }
       }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
+
+    &__link {
+      font-size: .875rem;
+    }
+  }
+
+  &__searchbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__searchfield {
+    font-size: .875rem;
+    padding-left: 3rem;
+    border-radius: .625rem;
+    height: 2.5rem;
+    width: 85%;
+    margin-top: .5rem;
+    background-color: $off-white;
+    color: $gray-svn;
   }
 
   &__section {

@@ -9,7 +9,7 @@ import Results from './components/Results/Results';
 function App() {
 
   const [enabledFeatures, setEnabledFeatures] = useState({
-    ADHD: false, Bionic: false, Blind: false, Cognitive: false, Seizure: false, Vision: false, Title: [false, undefined]
+    ADHD: false, Bionic: false, Blind: false, Cognitive: false, Seizure: false, Vision: false, Title: [false, undefined], Dark: false, Light: false, Content: false, Adjust: false, Highlight: false, Text: false
   })
 
   const modalRef = useRef()

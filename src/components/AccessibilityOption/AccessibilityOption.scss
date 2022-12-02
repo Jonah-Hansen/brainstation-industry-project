@@ -18,13 +18,21 @@
     width: 1.25rem;
     height: 1.25rem;
     overflow: hidden;
-    background-color: $gray-svn;
-    border-radius: 50%;
+
+    &--bubble {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background-color: $gray-svn;
+      border-radius: 50%;
+    }
   }
 
   &__details {
     flex-grow: 1;
-    padding-left: 2rem;
+    padding-left: 1.25rem;
   }
 
   &__title {

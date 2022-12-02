@@ -5,8 +5,8 @@
 .video-result {
   display: flex;
   gap: .5rem;
-  overflow-x: auto;
-  padding: 1rem;
+  overflow-x: scroll;
+  padding: .75rem 0;
 
   &__card {
     flex-shrink: 0;
