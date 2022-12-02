@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Element, Link } from 'react-scroll';
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption';
 import './Modal.scss';
@@ -47,6 +47,11 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, setIsConfirm, 
     setIsModal(false)
     setIsConfirm(true)
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
 
   return (
     <main className="modal">

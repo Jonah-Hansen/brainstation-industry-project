@@ -20,6 +20,10 @@ function App() {
   const [scroll, setScroll] = useState(0)
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     window.scrollTo(0, scroll)
     if (enabledFeatures.Title[0]) {
       const h2s = document.querySelectorAll('h2, h3')
