@@ -1,0 +1,15 @@
+@use '../../styles/colors' as *;
+
+.accessibility-button {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border: none;
+  background: url('../../assets/logos/accessibility.svg') no-repeat center;
+
+  &__text {
+    display: none;
+  }
+}
