@@ -26,18 +26,18 @@ function Confirm({ setIsConfirm, oldFeatures, enabledFeatures, setEnabledFeature
     } else if (!key.includes('Title') && enabledFeatures[key]) {
       let title;
       switch (key) {
-        case 'Blind': title = key + ' Users Friendly'; break;
-        case 'ADHD': title = key + ' Friendly'; break;
+        case 'Text': title = key + ' to Speech'; break;
+        case 'Closed': title = key + ' Captioning'; break;
         case 'Vision': title = key + ' Impaired Friendly'; break;
         case 'Seizure': title = key + ' Safe'; break;
-        case 'Cognitive': title = key + ' Disability Friendly'; break;
+        case 'Hover': title = key + ' Text'; break;
         case 'Dark': title = key + ' Contrast'; break;
         case 'Light': title = key + ' Contrast'; break;
         case 'Bionic': title = key + ' Reading'; break;
         case 'Content': title = key + ' Spacing'; break;
         case 'Adjust': title = key + ' Font Sizing'; break;
         case 'Highlight': title = key + ' Titles'; break;
-        case 'Text': title = key + ' Magnifier'; break;
+        case 'text': title = key + ' Magnifier'; break;
         default: title = 'unknown feature'
       }
       chosenFeatures.push(title)
