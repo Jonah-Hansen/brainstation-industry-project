@@ -8,6 +8,10 @@ import Results from './components/Results/Results';
 
 function App() {
 
+  const [enabledFeatures, setEnabledFeatures] = useState({
+    ADHD: false, Bionic: false, Blind: false, Cognitive: false, Seizure: false, Vision: false, Title: [false, undefined]
+  })
+
   const modalRef = useRef()
 
   return (
@@ -16,7 +20,7 @@ function App() {
       <Results />
       <Footer />
       <AccessibilityButton modalRef={modalRef} />
-      <Modal modalRef={modalRef} />
+      <Modal modalRef={modalRef} enabledFeatures={enabledFeatures} setEnabledFeatures={setEnabledFeatures} />
     </>
   );
 }

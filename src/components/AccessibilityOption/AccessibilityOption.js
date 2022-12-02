@@ -1,7 +1,7 @@
 import Switch from '@mui/material/Switch';
 import './AccessibilityOption.scss';
 
-function AccessibilityOption({ type, title, description, icon }) {
+function AccessibilityOption({ type, title, description, icon, handleSwitch, features }) {
 
   const colors = ['#DB4437', '#5592F6', '#F6C333', '#57BB8B', '#5E409D', '#FF67D4', '#13662B', '#068D85']
 
@@ -23,7 +23,7 @@ function AccessibilityOption({ type, title, description, icon }) {
             <h2 className='option-row__title'>{title}</h2>
             <p className='option-row__description'>{description}</p>
           </hgroup>
-          <Switch />
+          <Switch onChange={handleSwitch} checked={features[title.split(' ')[0]]} name={title.split(' ')[0]} />
         </>
       }
     </div>
