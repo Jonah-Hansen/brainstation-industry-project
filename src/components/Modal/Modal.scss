@@ -1,0 +1,55 @@
+@use '../../styles/colors' as *;
+@use '../../styles/breakpoints' as *;
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  background-color: white;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading-container {
+    display: flex;
+  }
+
+  &__back {
+    width: 2rem;
+    height: 2rem;
+
+    &-text {
+      display: none;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    border-bottom: 2px solid $steel;
+
+    &-heading {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
