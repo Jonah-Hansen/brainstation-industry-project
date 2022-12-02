@@ -1,0 +1,15 @@
+.related-searches {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    border-top: 1px solid #b1b3b4;
+    padding: 1rem 2rem;
+  }
+}
