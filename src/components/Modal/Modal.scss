@@ -60,6 +60,8 @@
         flex-shrink: 0;
         color: $gray-tre;
         padding-right: 2rem;
+        cursor: pointer;
+        display: flex;
 
         & > a.active {
           border-bottom: 2px solid $light-blue;
@@ -96,7 +98,7 @@
   &__section {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 1rem;
     border-bottom: 2px solid $gray-tre;
 
     &-heading {

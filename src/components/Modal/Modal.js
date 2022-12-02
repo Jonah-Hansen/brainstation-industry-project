@@ -60,16 +60,16 @@ function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, scroll }) {
         <nav className='modal__nav'>
           <ul className='modal__nav-list'>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} smooth={true} offset={-90} duration={250} >General</Link>
+              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >General</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} smooth={true} offset={-90} duration={250} >Visual</Link>
+              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >Visual</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-90} duration={250} >Content Adjustments</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >Content Adjustments</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-90} duration={250} >More</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >More</Link>
             </li>
           </ul>
         </nav>
