@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
 import AccessibilityButton from './components/AccessibilityButton/AccessibilityButton';
+import Confirm from './components/Confirm/Confirm';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Modal from './components/Modal/Modal';
@@ -12,7 +13,10 @@ function App() {
     ADHD: false, Bionic: false, Blind: false, Cognitive: false, Seizure: false, Vision: false, Title: [false, undefined], Dark: false, Light: false, Content: false, Adjust: false, Highlight: false, Text: false
   })
 
+  const [oldFeatures, setOldFeatures] = useState({})
+
   const [isModal, setIsModal] = useState(false)
+  const [isConfirm, setIsConfirm] = useState(false)
   const [scroll, setScroll] = useState(0)
 
   useEffect(() => {
@@ -30,7 +34,11 @@ function App() {
         </>}
 
       {isModal &&
-        <Modal scroll={scroll} setIsModal={setIsModal} enabledFeatures={enabledFeatures} setEnabledFeatures={setEnabledFeatures} />}
+        <Modal scroll={scroll} setIsModal={setIsModal} setIsConfirm={setIsConfirm} enabledFeatures={enabledFeatures} setEnabledFeatures={setEnabledFeatures} setOldFeatures={setOldFeatures} />}
+
+      {isConfirm &&
+        <Confirm setIsConfirm={setIsConfirm} oldFeatures={oldFeatures} setEnabledFeatures={setEnabledFeatures} enabledFeatures={enabledFeatures} />
+      }
     </>
   );
 }

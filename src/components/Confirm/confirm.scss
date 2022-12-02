@@ -1,0 +1,45 @@
+@use '../../styles/colors' as *;
+@use '../../styles/breakpoints' as *;
+
+.confirm {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &__preview {
+    background-color: black;
+    filter: opacity(.5);
+    height: 100vh
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  &__back {
+    width: 2rem;
+    height: 2rem;
+    background: url('../../assets/icons/back.svg') no-repeat;
+    background-size: cover;
+    border: none;
+
+    &-text {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  &__done {
+    color: $light-blue;
+    border: none;
+    background-color: white;
+  }
+}
