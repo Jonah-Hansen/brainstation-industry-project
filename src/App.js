@@ -21,7 +21,12 @@ function App() {
 
   useEffect(() => {
     window.scrollTo(0, scroll)
-  },)
+    if (enabledFeatures.Title[0]) {
+      const h2s = document.querySelectorAll('h2')
+      h2s.forEach(h2 => h2.style.color = enabledFeatures.Title[1])
+    } else document.querySelectorAll('h2').forEach(h2 => h2.removeAttribute('style'))
+
+  }, [enabledFeatures, scroll])
 
   return (
     <>

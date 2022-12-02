@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption'
 import './confirm.scss'
 
