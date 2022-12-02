@@ -1,0 +1,21 @@
+{
+  "page": {
+    "pageTitle": "YouTube",
+    "url": "http://m.youtube.com > playlist",
+    "title": "Accessibility Training - YouTube"
+  },
+  "vids": [
+    {
+      "channel": "google for education",
+      "title": "Closed Captions in Google Slides"
+    },
+    {
+      "channel": "google for education",
+      "title": "Keyboard Shortcuts in Google Suites"
+    },
+    {
+      "channel": "google for education",
+      "title": "Collaboration in Google Docs"
+    }
+  ]
+}
