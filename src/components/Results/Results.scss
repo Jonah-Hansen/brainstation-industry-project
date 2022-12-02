@@ -1,6 +1,10 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
+
 .results {
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  background-color: #F1F3F4;
+  background-color: $off-white;
 }
