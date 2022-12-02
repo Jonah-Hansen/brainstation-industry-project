@@ -26,7 +26,20 @@ function App() {
       h2s.forEach(h2 => h2.style.color = enabledFeatures.Title[1])
     } else document.querySelectorAll('h2').forEach(h2 => h2.removeAttribute('style'))
 
-  }, [enabledFeatures, scroll])
+    if (enabledFeatures.Bionic) {
+      const texts = document.querySelectorAll('h1, h2, h3, h4, p, a, li.related-searches__item')
+      texts.forEach(element => {
+        element.style.fontWeight = '400'
+        const wordsArray = element.innerText.split(' ')
+        let html = []
+        wordsArray.forEach(word => (
+          html.push(`<b>${word.slice(0, 3)}</b>${word.slice(3)}`)
+        ))
+        element.innerHTML = html.join(' ')
+      })
+    }
+
+  },)
 
   return (
     <>
