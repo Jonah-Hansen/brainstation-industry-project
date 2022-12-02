@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Element, Link } from 'react-scroll';
 import AccessibilityOption from '../AccessibilityOption/AccessibilityOption';
 import './Modal.scss';
@@ -15,32 +16,60 @@ import SeizureIcon from '../../assets/icons/seizure.svg';
 import ContentIcon from '../../assets/icons/spacing.svg';
 import ImpairedIcon from '../../assets/icons/vision.svg';
 
-function Modal({ modalRef }) {
+function Modal({ enabledFeatures, setEnabledFeatures, setIsModal, scroll }) {
+
+  const [features, setFeatures] = useState({ ...enabledFeatures })
+
+  const handleSwitch = event => {
+    const newFeatures = { ...features }
+    if (event.target.name.split(' ')[0] === 'Title') {
+      newFeatures[event.target.name.split(' ')[0]][0] = event.target.checked
+    } else {
+      newFeatures[event.target.name.split(' ')[0]] = event.target.checked
+    }
+    setFeatures(newFeatures)
+  }
+
+  const handleColor = (color) => {
+    const newFeatures = { ...features }
+    newFeatures.Title[1] = color
+    setFeatures(newFeatures)
+  }
+
+  const handleCancel = () => {
+    setFeatures(enabledFeatures)
+    setIsModal(false)
+  }
+
+  const handleDone = () => {
+    setEnabledFeatures(features)
+    setIsModal(false)
+  }
 
   return (
-    <main ref={modalRef} className="modal--hidden">
+    <main className="modal">
       <header className='modal__header'>
         <section className='modal__heading-container'>
-          <button className='modal__back' onClick={() => modalRef.current.className = 'modal--hidden'}>
+          <button className='modal__back' onClick={handleCancel}>
             <span className='modal__back-text'>back</span>
           </button>
           <h1 className='modal__title'>Google Accessibility</h1>
-          <button className='modal__done'>Done</button>
+          <button className='modal__done' onClick={handleDone} >Done</button>
         </section>
 
         <nav className='modal__nav'>
           <ul className='modal__nav-list'>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} smooth={true} offset={-50} duration={250} >General</Link>
+              <Link className='modal__nav__link' activeClass="active" to="general" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >General</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} smooth={true} offset={-50} duration={250} >Visual</Link>
+              <Link className='modal__nav__link' activeClass="active" to="visual" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >Visual</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >Content Adjustments</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >Content Adjustments</Link>
             </li>
             <li className='modal__nav-list-item'>
-              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} smooth={true} offset={-50} duration={250} >More</Link>
+              <Link className='modal__nav__link' activeClass="active" to="content" spy={true} hashSpy={true} smooth={true} offset={-80} duration={250} >More</Link>
             </li>
           </ul>
         </nav>
@@ -51,29 +80,29 @@ function Modal({ modalRef }) {
       <Element name='general' >
         <section className='modal__section'>
           <h2 className='modal__section-heading'>General</h2>
-          <AccessibilityOption title={'Blind Users Friendly'} icon={BlindIcon} description={'Activates Screen Reader'} />
-          <AccessibilityOption title={'ADHD Friendly'} icon={AdhdIcon} description={'More Focus, Fewer Distractions'} />
-          <AccessibilityOption title={'Vision Impaired Friendly'} icon={ImpairedIcon} description={'Enhances screen visuals'} />
-          <AccessibilityOption title={'Seizure Safe'} icon={SeizureIcon} description={'Clear flashes and reduces color'} />
-          <AccessibilityOption title={'Cognitive Disability Friendly'} icon={CognitiveIcon} description={'Assists with reading and focusing'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Blind Users Friendly'} icon={BlindIcon} description={'Activates Screen Reader'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'ADHD Friendly'} icon={AdhdIcon} description={'More Focus, Fewer Distractions'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Vision Impaired Friendly'} icon={ImpairedIcon} description={'Enhances screen visuals'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Seizure Safe'} icon={SeizureIcon} description={'Clear flashes and reduces color'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Cognitive Disability Friendly'} icon={CognitiveIcon} description={'Assists with reading and focusing'} />
         </section>
       </Element>
       <Element name='visual'>
         <section className='modal__section'>
           <h2 className='modal__section-heading'>Visuals</h2>
-          <AccessibilityOption title={'Dark Contrast'} icon={DarkContrastIcon} />
-          <AccessibilityOption title={'Light Contrast'} icon={LightContrastIcon} />
-          <AccessibilityOption title={'Bionic Reading'} icon={BionicIcon} description={'Makes words easier to distinguish'} />
-          <AccessibilityOption title={'Title Colors'} type={'colors'} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Dark Contrast'} icon={DarkContrastIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Light Contrast'} icon={LightContrastIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Bionic Reading'} icon={BionicIcon} description={'Makes words easier to distinguish'} />
+          <AccessibilityOption handleSwitch={handleSwitch} handleColor={handleColor} features={features} title={'Title Colors'} type={'colors'} />
         </section>
       </Element>
       <Element name='content' >
         <section className='modal__section'>
           <h2 className='modal__section-heading'>Content Adjustments</h2>
-          <AccessibilityOption title={'Content Spacing'} icon={ContentIcon} />
-          <AccessibilityOption title={'Adjust Font Sizing'} icon={FontSizingIcon} />
-          <AccessibilityOption title={'Highlight Titles'} icon={HighlightIcon} />
-          <AccessibilityOption title={'Text Magnifier'} icon={MagnifyIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Content Spacing'} icon={ContentIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Adjust Font Sizing'} icon={FontSizingIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Highlight Titles'} icon={HighlightIcon} />
+          <AccessibilityOption handleSwitch={handleSwitch} features={features} title={'Text Magnifier'} icon={MagnifyIcon} />
         </section>
       </Element>
     </main>

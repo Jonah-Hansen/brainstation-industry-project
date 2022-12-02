@@ -1,8 +1,14 @@
-import './AccessibilityButton.scss'
 
-function AccessibilityButton({ modalRef }) {
+import './AccessibilityButton.scss';
+
+function AccessibilityButton({ setIsModal, setScroll }) {
   return (
-    <button className='accessibility-button' onClick={() => modalRef.current.className = 'modal'}><p className='accessibility-button__text'>Accessibility Options</p></button>
+    <button className='accessibility-button' onClick={() => {
+      setIsModal(true)
+      setScroll(window.pageYOffset)
+      window.scrollTo(0, 0)
+    }}>
+      <p className='accessibility-button__text'>Accessibility Options</p></button>
   )
 }
 
