@@ -24,7 +24,7 @@ function App() {
     if (enabledFeatures.Title[0]) {
       const h2s = document.querySelectorAll('h2, h3')
       h2s.forEach(h2 => h2.style.color = enabledFeatures.Title[1])
-    } else document.querySelectorAll('h2').forEach(h2 => h2.removeAttribute('style'))
+    } else document.querySelectorAll('h2').forEach(h2 => h2.style.color = '')
 
     if (enabledFeatures.Bionic) {
       const texts = document.querySelectorAll('h1, h2, h3, h4, p, a, li.related-searches__item')
@@ -42,7 +42,10 @@ function App() {
     if (enabledFeatures.Dark) {
       document.querySelector('html').style.filter = 'invert(1) hue-rotate(180deg)'
       document.querySelectorAll('img').forEach(el => el.style.filter = 'invert(1) hue-rotate(180deg)')
-    } else document.querySelector('html').removeAttribute('style')
+    } else document.querySelector('html').style.filter = 'none'
+    if (enabledFeatures.Magnify || enabledFeatures.Adjust) {
+      document.querySelector('html').style.fontSize = '20px'
+    } else document.querySelector('html').style.fontSize = '16px'
 
   },)
 
