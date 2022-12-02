@@ -6,7 +6,7 @@ import './Results.scss'
 function Results() {
   return (
     <ul className='results'>
-      {data.map(item => <ResultItem data={item} />)}
+      {data.map((item, index) => <ResultItem key={index} data={item} />)}
     </ul>
   )
 }
