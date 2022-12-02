@@ -1,5 +1,4 @@
 {
-  "editor.defaultFormatter": null,
   "css.format.newlineBetweenSelectors": true,
   "scss.format.newlineBetweenSelectors": false,
   "scss.format.spaceAroundSelectorSeparator": true,
